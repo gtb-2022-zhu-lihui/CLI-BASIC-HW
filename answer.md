@@ -33,3 +33,29 @@ else
         echo "odd"
 fi
 ```
+
+## Problem 4
+
+Answer
+
+```bash
+#!/bin/bash
+
+SEQ=SEQ_FILE
+if [[ ! -s $SEQ ]]
+then
+        touch $SEQ
+        echo 1 > $SEQ
+fi
+value=$(cat $SEQ)
+echo $((value+1)) > $SEQ
+echo $valu
+```
+
+## Problem 5
+
+Answer
+
+```bash
+cat FILE_NAME | awk 'BEGIN{sum=0} {sum=sum+$1} END{print sum}'
+```
