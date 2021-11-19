@@ -1,0 +1,14 @@
+#!/bin/bash
+
+input=${1:-please enter a number}
+expr $input + 0 &>/dev/null
+if [[ $? -ne 0 ]]
+then
+	echo $input
+elif [[ $((input % 2)) -eq 0 ]]
+then
+	echo "even"
+else 
+	echo "odd"
+fi
+
