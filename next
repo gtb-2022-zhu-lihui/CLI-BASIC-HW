@@ -1,0 +1,11 @@
+#!/bin/bash
+
+SEQ=SEQ_FILE
+if [[ ! -s $SEQ ]]
+then
+        touch $SEQ
+	echo 1 > $SEQ
+fi
+value=$(cat $SEQ)
+echo $((value+1)) > $SEQ
+echo $value
