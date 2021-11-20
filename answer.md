@@ -49,7 +49,7 @@ then
 fi
 value=$(cat $SEQ)
 echo $((value+1)) > $SEQ
-echo $valu
+echo $value
 ```
 
 ## Problem 5
